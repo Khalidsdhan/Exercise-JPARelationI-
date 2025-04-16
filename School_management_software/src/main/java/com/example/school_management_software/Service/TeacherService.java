@@ -29,10 +29,10 @@ public class TeacherService {
         if(oldTeacher==null){
             throw new ApiException("Teacher is not found");
         }
-        oldTeacher.setName(oldTeacher.getName());
-        oldTeacher.setAge(oldTeacher.getAge());
-        oldTeacher.setEmail(oldTeacher.getEmail());
-        oldTeacher.setSalary(oldTeacher.getSalary());
+        oldTeacher.setName(teacher.getName());
+        oldTeacher.setAge(teacher.getAge());
+        oldTeacher.setEmail(teacher.getEmail());
+        oldTeacher.setSalary(teacher.getSalary());
 
         teacherRepository.save(oldTeacher);
     }
