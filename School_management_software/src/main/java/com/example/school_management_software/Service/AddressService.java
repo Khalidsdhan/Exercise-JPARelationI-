@@ -37,9 +37,9 @@ public class AddressService {
         if(address==null){
             throw new ApiException("address not found");
         }
-        address.setArea(address.getStreet());
-        address.setStreet(address.getStreet());
-        address.setBuildingNumber(address.getBuildingNumber());
+        address.setArea(addressDOT.getArea());
+        address.setStreet(addressDOT.getStreet());
+        address.setBuildingNumber(addressDOT.getBuildingNumber());
 
         addressRepository.save(address);
     }
